@@ -9,6 +9,7 @@ public class Queue {
     }
 
     public void enqueue(Ticket ticket) {
+
         if (isFull()) {
             throw new IllegalStateException("Queue is full");
         }
@@ -18,6 +19,7 @@ public class Queue {
     }
 
     public Ticket dequeue() {
+
         if (isEmpty()) {
             throw new IllegalStateException("Queue is empty");
         }
@@ -28,6 +30,7 @@ public class Queue {
     }
 
     public boolean isEmpty() {
+        
         return size == 0;
     }
 

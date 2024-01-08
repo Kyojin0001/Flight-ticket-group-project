@@ -1,6 +1,8 @@
 public class Ticket {
+
     private String passengerName;
     private String flightDate;
+
 
     public Ticket(String passengerName, String flightDate) {
         this.passengerName = passengerName;
@@ -8,6 +10,11 @@ public class Ticket {
     }
 
     // Getters
-    public String getPassengerName() { return passengerName; }
-    public String getFlightDate() { return flightDate; }
+    public String getPassengerName() { 
+        return passengerName; 
+    }
+    
+    public String getFlightDate() { 
+        return flightDate; 
+    }
 }

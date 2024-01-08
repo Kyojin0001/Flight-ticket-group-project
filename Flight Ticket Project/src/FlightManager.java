@@ -2,14 +2,27 @@ import java.util.Scanner;
 
 public class FlightManager {
     private Flight[] flights;
-    private Queue waitingList;
+    private int numberOfFlights;
 
-    public FlightManager(int numberOfFlights, int queueCapacity) {
-        flights = new Flight[numberOfFlights];
-        waitingList = new Queue(queueCapacity);
-        // Initialize flights with dummy data
+    public FlightManager(int size) {
+
+        flights = new Flight[size];
+        numberOfFlights = 0;
+    }
+
+    public void addFlight(String flightNumber, String date, int seats) {
+
+        if (numberOfFlights < flights.length) {
+            flights[numberOfFlights++] = new Flight(flightNumber, date, seats);
+        }
+    }
+
+    public void searchFlightsByDate(String date) {
+        
         for (int i = 0; i < numberOfFlights; i++) {
-            flights[i] = new Flight("2024-01-" + (i + 1), 5); // Example: 5 tickets per flight
+            if (flights[i].getDate().equals(date)) {
+                System.out.println("Flight Number: " + flights[i].getFlightNumber() + ", Seats Available: " + flights[i].getSeatsAvailable());
+            }
         }
     }
 
