@@ -24,7 +24,13 @@ public class Flight {
         return seatsAvailable; 
     }
 
-    
+    public void setFlightNumber(String flightNumber) { 
+        this.flightNumber = flightNumber; 
+    }
+
+    public void setDate(String date) { 
+        this.date = date; 
+    }
     
     public void bookSeat() { 
         if (seatsAvailable > 0) seatsAvailable--; 

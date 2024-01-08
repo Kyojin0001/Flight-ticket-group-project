@@ -17,4 +17,13 @@ public class Ticket {
     public String getFlightDate() { 
         return flightDate; 
     }
+
+    //Setter
+    public void setPassengerName(String passengerName) { 
+        this.passengerName = passengerName; 
+    }
+
+    public void setFlightDate(String flightDate) { 
+        this.flightDate = flightDate; 
+    }
 }

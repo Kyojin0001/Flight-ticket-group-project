@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class FlightManager {
     private Flight[] flights;
     private int numberOfFlights;
@@ -18,7 +16,7 @@ public class FlightManager {
     }
 
     public void searchFlightsByDate(String date) {
-        
+
         for (int i = 0; i < numberOfFlights; i++) {
             if (flights[i].getDate().equals(date)) {
                 System.out.println("Flight Number: " + flights[i].getFlightNumber() + ", Seats Available: " + flights[i].getSeatsAvailable());
